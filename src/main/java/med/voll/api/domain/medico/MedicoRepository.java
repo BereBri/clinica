@@ -17,6 +17,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
     // clase médico.
 
     //este es el primer cambio en intellij
+    //x2
     @Query("""
        select m from Medico m
        where m.activo= true 

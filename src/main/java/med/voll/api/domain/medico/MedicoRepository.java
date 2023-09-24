@@ -16,6 +16,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
     // que indicarse el atributo que existe en este caso dentro de la
     // clase médico.
 
+    //este es el primer cambio en intellij
     @Query("""
        select m from Medico m
        where m.activo= true 

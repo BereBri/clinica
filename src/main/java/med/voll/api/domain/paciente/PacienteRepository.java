@@ -10,10 +10,12 @@ import org.springframework.stereotype.Repository;
 public interface PacienteRepository extends JpaRepository<Paciente, Long> {
     Page<Paciente> findAllByActivoTrue(Pageable paginacion);
 
+
     @Query("""
             select p.activo
             from Paciente p
             where p.id=:idPaciente 
             """)
+    //query se usa para realizar consultas
     Boolean findActivoById(Long idPaciente);
 }

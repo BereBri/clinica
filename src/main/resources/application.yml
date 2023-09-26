@@ -1,0 +1,20 @@
+spring:
+  profile.active: dev, test, prod
+  datasource:
+    url: jdbc:mysql://localhost:3336/volmed_api
+    username: root
+    password: 1234
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  error:
+    include-stacktrace: never
+api:
+  security:
+    secret: ${JWT_SECRET:123456}
+
+#se activa el perfil de desarrollo, el perfil de test y el perfil de produccion
